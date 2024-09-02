@@ -1,0 +1,14 @@
+prefix=/home/liulei10/LL/ffmpeg/FFmpeg-n4.4.3/install/
+exec_prefix=${prefix}
+libdir=/home/liulei10/LL/ffmpeg/FFmpeg-n4.4.3/install//lib
+includedir=/home/liulei10/LL/ffmpeg/FFmpeg-n4.4.3/install//include
+
+Name: libpostproc
+Description: FFmpeg postprocessing library
+Version: 55.9.100
+Requires: 
+Requires.private: libavutil >= 56.70.100
+Conflicts:
+Libs: -L${libdir}  -lpostproc 
+Libs.private: -lm -latomic
+Cflags: -I${includedir}

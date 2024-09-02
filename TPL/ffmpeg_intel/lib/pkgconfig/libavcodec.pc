@@ -1,0 +1,14 @@
+prefix=/home/liulei10/LL/ffmpeg/FFmpeg-n4.4.3/install/
+exec_prefix=${prefix}
+libdir=/home/liulei10/LL/ffmpeg/FFmpeg-n4.4.3/install//lib
+includedir=/home/liulei10/LL/ffmpeg/FFmpeg-n4.4.3/install//include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 58.134.100
+Requires: 
+Requires.private: libswresample >= 3.9.100, libavutil >= 56.70.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -pthread -lm -latomic -lz -L/usr/local/lib -lva -lmfx -lstdc++ -ldl
+Cflags: -I${includedir}

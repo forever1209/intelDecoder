@@ -1,0 +1,14 @@
+prefix=/home/liulei10/LL/ffmpeg/FFmpeg-n4.4.3/install/
+exec_prefix=${prefix}
+libdir=/home/liulei10/LL/ffmpeg/FFmpeg-n4.4.3/install//lib
+includedir=/home/liulei10/LL/ffmpeg/FFmpeg-n4.4.3/install//include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 56.70.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -pthread -L/usr/local/lib -lva-drm -lva -lvdpau -lX11 -lm -ldrm -lmfx -lstdc++ -ldl -L/usr/local/lib -lva -latomic -lXv -lX11 -lXext
+Cflags: -I${includedir}
